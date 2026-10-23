@@ -1,12 +1,24 @@
 # BaziQA：全球算命師大賽歷屆真題命理推理基準
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/arXiv-2602.12889-b31b1b.svg)](https://arxiv.org/abs/2602.12889)
-![Questions](https://img.shields.io/badge/真题-555%20道-2a78d6.svg)
-![Years](https://img.shields.io/badge/年份-2010–2026-2a78d6.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Paper](https://img.shields.io/badge/Paper-arXiv:2602.12889-b31b1b.svg)](https://arxiv.org/abs/2602.12889) [![Questions](https://img.shields.io/badge/Questions-555-blue.svg)]() [![Years](https://img.shields.io/badge/Years-2010~2026-green.svg)]()
 
-**中文** | [English](README_EN.md)
+*中文* | [English](README_EN.md)
 
+---
+
+## 📊 核心数据看板 (At a Glance)
+
+> 📦 **总题目**：555 题 (含 Celebrity50 后续扩充共计 1,043 题) | 👥 **真实命主**：117 个 | ⏳ **跨越年限**：17 年 (2010–2026) | 🏆 **人类冠军正确率**：43% – 78%
+
+```mermaid
+graph TD
+    A[BaziQA 数据根节点] --> B[meta 比赛元信息]
+    A --> C[Persons 命主列表共117个]
+    C --> D[profile 出生资料: 年月日时/时区/真太阳时]
+    C --> E[setter 出题老师与术数: 八字/紫微/奇门]
+    C --> F[context 官方定盘已知信息]
+    C --> G[questions 题目列表共555题]
+    G --> H[题干 / A-D选项 / 正确答案]
 BaziQA 收录香港青年術數家協會「全球算命師大賽」**2010–2026 年全部 17 届、共 555 道真题**，用来评测大语言模型的中国命理推理能力（八字为主，兼有紫微斗数、奇门遁甲）。
 
 每道题都是专业命理师用一位真实命主出题，正确答案就是命主的真实经历。主办方每年公布答案和冠军成绩，所以这份数据既能给模型打分，也能直接和人类顶尖命理师比较。
